@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{%  block title %} Web Escola {% endblock%}
+
+{%  block content %}
+    <div class="col s12 m8 l9  allH ">
+
+        <div class="row center-align allH ">
+        
+            <div class="col s12  allH ">
+              
+                <h1>Minhas Tarefas</h1>
+                <p>Seja bem vindo a sua <em>Central de Tarefas</em>!</p>
+                
+                <p>Resumo:</p>
+                <ul>
+                    
+                    <li><strong>Matérias Cadastradas:</strong> {{ num_materias }}</li>
+                    <li><strong>Exercícios do Portal:</strong> {{ num_exercises }}</li>
+                    <li><strong>Exercícios agendados:</strong> {{ num_instances }}</li>
+                    <li><strong>Exercícios disponíveis para responder:</strong> {{ num_instances_available }}</li>
+                    
+                </ul>
+
+
+
+
+
+
+                <div class="row center-align">
+            
+                    <a href="../" ><i class="small material-icons center">assignment_return</i></a>
+                </div>
+            </div>
+            
+        
+    </div>
+    </div>
+
+  
+
+
+    
+
+
+{% endblock %}

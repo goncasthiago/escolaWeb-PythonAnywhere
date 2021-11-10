@@ -1,0 +1,303 @@
+.nav_img {
+    height: 60px;
+    
+}
+.navbar-fixed{
+    text-align: left;
+}
+.tela{
+    width:95%;
+    position:relative;
+    left:11px;
+}
+.lateral{
+    width:-6px;
+}
+
+
+
+body{
+    margin: 0px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+
+
+}
+h1 {
+    margin: 50px auto 0 auto;
+    font-family: 'Klee One', cursive;
+    font-size: 4.625em;
+    color: #66BFBF;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    color: #66BFBF;
+    margin: 0 auto 0 auto;
+    
+}
+.title_nav{
+    position: absolute;
+    left: 75px;
+    width: 180px;
+}
+
+.ccc {
+    background-color: #D64933(0, 0%, 37%, 0.822);
+    border: transparent;
+    padding: 0;
+    margin-bottom: 23px;
+
+}
+
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: #fffbfe;
+   }
+
+html {
+	height: 90%;
+}
+body {
+	height: 98%;
+}
+
+.allH{    
+    height: 98%;
+}
+.menu-icon{
+    margin: 45px 0 45px 0;
+}
+
+.azulzinho{
+    background-color:#E5ECF4!important;
+}
+
+.cinza{
+    background-color:#919098 !important;
+}
+.snow{
+    background-color:#fffbfe !important;
+}
+
+.snow-text{
+    color:#fffbfe !important;
+}
+
+
+.conquista{
+    padding: 18px;
+}
+.trofeu{
+    height: 48px;
+    width: 15px;
+    border-radius: 4px;
+}
+.cblack{
+    background-color:#090302 !important;
+}
+
+.cblack-text{
+    color:#090302 !important;
+}
+
+.cgreen{
+    background-color:#7A9B76 !important;
+}
+
+.cgreen-text{
+    color:#7A9B76 !important;
+}
+
+.cyellow{
+    background-color:#F7FF58 !important;
+}
+
+.cyellow-text{
+    color:#F7FF58 !important;
+}
+
+.baseazul_cima{
+    background-color: #0a5774;
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: 1;
+}
+
+.azul{
+    background-color: #0a5774;
+}
+
+
+.baseazul_baixo{
+    background-color: #0a5774;
+    height: 38px;
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    z-index: 1;
+    text-align: center;
+}
+
+.baseazul_baixo p {
+    margin: 20px 0 0 0;
+    font-size: 0.75rem;
+     color: #EAF6F6
+
+}
+p{
+    color: #2B303A;
+    margin-top: 0;
+
+}
+
+.gunmetal{
+    background-color: #2B303A;
+}
+.laranja{
+    background-color: #D64933;
+}
+
+.voltar{
+    position: absolute;
+    right: 16px;
+    top:87px;
+}
+
+
+.gunmetal-text{
+    color: #2B303A;
+}
+
+.espaco{
+    margin: 0;
+    padding: 0;
+}
+
+.h2_login{
+padding-top: 10px;
+}
+
+.mais_espaco{
+    margin: 36px auto 0 auto;
+    width: 70%;
+}
+
+.escudo{
+    margin: 90px auto auto auto;
+    display: block;
+    width: 45%;
+    
+}
+
+
+
+.cred{
+    background-color:#AD2E24 !important;
+}
+
+.cred-text {
+    color:#AD2E24 !important;
+}
+
+.formulario {
+    margin-top:38px;
+}
+
+textarea {
+    resize: none;
+  }
+.select-wrapper+label {
+    top: 6px;
+    font-size: 1rem;
+}
+.enunciado_text {
+    color: #9e9e9e;
+    font-size: 1rem;
+    font-weight: normal;
+   /*
+    display: inline-block;
+    position: absolute;
+    top:100px;
+    left: 70px;
+    */
+}
+
+
+
+.enunciado_form .input{
+    margin: 0px; 
+    width: 100%; 
+    height: 179px;
+}
+
+hr{
+    border: 8px;
+    border-style: dotted none none none;
+    width: 8%;
+    
+    margin: 36px auto 20px auto;
+}
+
+.carousel .carousel-item{
+    width: 330px;
+    
+}
+
+.tomato{
+    background-color: tomato;
+
+}
+
+.box{
+
+    border: 8px;
+    padding: 25px;
+    border-style: dotted dotted dotted dotted ;
+/*    width: 8%;*/
+    color: #484b4b;
+    background-color: tomato;
+    
+
+    
+}
+
+.perguntas .input{
+    margin: 0px; 
+    width: 100%; 
+    height: 100px;
+}
+
+.pergunta_text {
+    color: #9e9e9e;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top:0;
+    
+}
+
+.row{
+    text-align: center;
+}
+
+.cards_dash{
+    width: 70%;
+}
+
+
+
+.input-field{
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.laterais{
+    margin: 0 0 0 0;
+}
+
+.centralizar{
+    margin: 0 auto 0 auto;
+}
+

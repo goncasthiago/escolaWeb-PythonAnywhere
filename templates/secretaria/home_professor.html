@@ -1,0 +1,38 @@
+{% extends "base_professor.html" %}
+{% load static %}
+{% block title %} Secretaria {% endblock%}
+
+{% block content %}
+
+
+<div class="row center-align ">
+    <h1>Minha Turma</h1>
+
+    <p>Seja bem vindo a sua <em>Central de Informações</em>!</p>
+
+</div>
+<div class="container">
+    <div class="row center-align ">
+        <div class="row">
+            <div class="col s12 m6 offset-m3">
+                <div class="card tomato">
+                    <div class="card-content snow-text">
+                        <a href="{% url 'secretaria:cadastra' %}"><span class="card-title">Criar
+                                Exercicios</span>
+                            <p><i class="large material-icons snow-text">assignment</i>
+                        </a></p>
+                    </div>
+
+                </div>
+            </div>
+
+           
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

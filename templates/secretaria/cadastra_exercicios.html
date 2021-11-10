@@ -1,0 +1,71 @@
+{% extends "base_professor.html" %}
+{% load materializecss %}
+{% load static %}
+{% block headscripts %}
+<style>
+    nav .brand-logo {
+        color: #2B303A;
+    }
+</style>
+{% endblock %}
+{% block title %} Exercicios {% endblock%}
+
+{% block content %}
+<div class="col s12 m10 l11 centralizar">
+    <div class="formulario">
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <div class="row s10 m12 l8 ">
+                <div class="col s10 m12 l8">
+
+                    <span class="enunciado_text">Enunciado</span>
+                    <div class="enunciado_form">{{ form.enunciado }}</div>
+
+                </div>
+
+                <div class="col s10 m12 l4">
+
+                    {{ form.until_date|materializecss }}
+                    {{ form.materia|materializecss }}
+
+                    <div class="ativa">{{ form.is_active|materializecss }}</div>
+                </div>
+
+
+            </div>
+            <hr>
+            <div class="row perguntas">
+
+
+                {{ form_resposta.management_form }}
+
+                {% for fr in form_resposta %}
+                <div class="col s10 m12 l3">
+                    <span class="pergunta_text">Resposta</span>
+                    {{ fr.resposta_texto }}
+                    {{ fr.is_correct|materializecss }}
+                </div>
+
+
+
+                {% endfor %}
+            </div>
+
+
+            <button class="waves-effect waves-light  green accent-3 btn-large" type="submit" type="submit">
+                <i class="material-icons left">add_circle</i>
+                Cadastrar
+            </button>
+
+            <a class="waves-effect waves-light red btn-large" href="{% url 'exercicios:inicial' %}">
+                <i class="material-icons left">cancel</i>
+                Cancelar
+            </a>
+
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

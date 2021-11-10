@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link
+    href="https://fonts.googleapis.com/css2?family=Klee+One&family=Merriweather:wght@300&family=Montserrat:wght@200&display=swap"
+    rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <title>{% block title %} {% endblock%}</title>
+    
+    {% block headscripts %}
+
+    {% endblock %}
+</head>
+<body >
+  <div class="baseazul_cima"></div>
+  <div class="baseazul_baixo">
+    <p>© 2021 Escola Web</p>
+  </div>
+  <div class="navbar-fixed ">
+  <nav>
+    <div class="nav-wrapper cyellow gunmetal-text">
+      <a href="#" class="brand-logo" >
+        <img class="nav_img" src="{% static 'img\graduation-cap.png' %}" alt="chapeu de estudante">
+        <span class="title_nav">Escola Web</span>
+        
+      
+      </a>
+
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a class ="navbar-end navbar-item " href="{% url 'secretaria:inicial'%}">Inicial</a></li>
+        
+        {% if user.is_authenticated %}
+      <li><a class ="navbar-end navbar-item " href="{% url 'exercicios:resumo'%}">Exercicios</a></li>  
+      <li><a href="{% url 'users:perfil' %}">{{request.user.name}}</a></li>
+      <li><a href="{% url 'logout'%}"><i class="small material-icons">exit_to_app</i></a></li>
+   {% else %}
+     <li><a href="{% url 'login'%}?next={{ 'secretaria:inicial' }}">Entrar</a></li>
+   {% endif %}
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+
+
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a class ="navbar-end navbar-item " href="{% url 'secretaria:inicial'%}">Inicial</a></li>
+    <li><a class ="navbar-end navbar-item " href="{% url 'exercicios:inicial'%}">Exercicios</a></li>
+    {% if user.is_authenticated %}
+    <li><a href="{% url 'users:perfil' %}">{{request.user.name}}</a></li>
+     <li><a href="{% url 'logout'%}?next={{request.path}}"><i class="small material-icons">exit_to_app</i></a></li>
+   {% else %}
+     <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+   {% endif %}
+</ul>
+      <!-- breadcrumps-->
+      {% block breadcrumb %}
+
+      {% endblock %}
+     
+      {% block content %}
+
+      {% endblock %}
+     <!--JavaScript at end of body for optimized loading-->
+     <script type="text/javascript" src="{% static  'js/materialize.min.js' %}"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="{% static 'js/main.js' %}"></script>
+     {% block scripts %}
+
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block headscripts %}
+<style>
+  nav .brand-logo {
+    color: #2B303A;
+  }
+</style>
+{% endblock %}
+{% load materializecss %}
+{%  block title %} Web Escola {% endblock%}
+
+{%  block content %}
+
+
+    <div class="col s12 m8 l9   ">
+
+        <div class="row center-align  ">
+          <h1 class="espaco">Exercício {{questao.id}} </h1>
+
+    
+        
+            <div class="col s12 center-align ">
+              <h4 class="conquista">{{questao}}</h4>
+                
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {% for q in alternativas %}
+                    <p>
+                      <label>
+                        <input class="with-gap" name="resposta" value="{{questao.id}}|{{q.id}}" type="radio"  />
+                        <span>{{q.resposta_texto}}</span>
+                      </label>
+                    </p>
+                    
+
+                    {% endfor %}
+
+                    <button class="waves-effect waves-light  tomato btn-large" type="submit" type="submit"><i class="material-icons left">send</i>Enviar</button>
+                </form>
+                
+                
+
+
+
+            </div>
+            <a class="voltar" href="{% url 'exercicios:resumo' %}" ><i class="small material-icons center">assignment_return</i></a>
+            
+        
+    </div>
+    
+      </div>
+    
+    </div>
+    
+
+{% endblock %}
+
+
+              
+                
+

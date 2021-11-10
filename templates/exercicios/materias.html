@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{%  block title %} Web Escola {% endblock%}
+
+{%  block content %}
+
+<div class="row">
+
+    
+    <div class="col  s12 m4 l3 azulzinho ">
+        
+        <div class="col s12 m12 l12">
+            
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="https://lorempixel.com/100/190/abstract/4/">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>Todos Exercícios</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{% url 'exercicios:resumo' %}">Ver os exercícios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        {% for materia in materias %}  
+        
+        <div class="col s12 m12 l12">
+            
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="https://lorempixel.com/100/190/abstract/4/">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>Exercícios de {{materia.name}}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Ver os exercícios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+           
+        {% endfor %}
+    </div>
+         
+
+    {% block exercicios %} {% endblock %}
+
+  </div>
+
+
+    
+
+
+{% endblock %}

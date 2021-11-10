@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Web Escola {% endblock%}
+
+{% block content %}
+
+<div class="col s11 m8 l9   ">
+
+
+    <h1 class="espaco">Questões</h1>
+
+
+    
+        {% if tasks %}
+
+
+
+        <div class="carousel">
+            {% for question in tasks %}
+
+            <a class="carousel-item" href="{% url 'exercicios:questoes' question.exercicio_id  %}">
+                <div class="box">
+                    <span class="gunmetal-text"> {{question}} </span>
+                </div>
+            </a>
+
+
+            {% endfor %}
+        </div>
+
+        <p>
+            Arraste para as laterais para ver outras perguntas.
+        </p>
+        <p>
+            Clique na pergunta para respondê-la.
+        
+        </p>
+        {% else %}
+        <h2>Parabéns"</h2>
+        <p>Você respondeu todas as perguntas.</p>
+
+
+        {% endif %}
+        <a class="voltar" href="{% url 'secretaria:inicial' %}" ><i class="small material-icons center">assignment_return</i></a>
+
+
+    
+
+    {% endblock %}
